@@ -10,16 +10,6 @@ export default [
     view: 'Course1'
   },
   {
-    path: '/course2',
-    // Relative to /src/views
-    view: 'Course2'
-  },
-  {
-    path: '/course3',
-    // Relative to /src/views
-    view: 'Course3'
-  },
-  {
     path: '/table-list',
     name: 'Table List',
     view: 'TableList'

@@ -38,7 +38,34 @@
       <v-list>
       </v-list>
     </v-menu>
+    <v-card>
+      <v-card>
+        <template>
+  <div class="text-xs-center">
+
+    <v-expansion-panel>
+      <v-expansion-panel-content
+      v-for="(item,i) in courses"
+      :key="i"
+      expand-icon="mdi-menu-down"
+      >
+        <template v-slot:header>
+          <div>{{item}}</div>
+        </template>
         <v-card>
+          <v-card-text class="grey lighten-3">
+            <a>정보</a></br>
+            <a>지도</a></br>
+            <a>몰라</a>
+          </v-card-text>
+        </v-card>
+    </v-expansion-panel-content>
+  </v-expansion-panel>
+  <v-menu offset-y>
+    </v-menu>
+      </div>
+      </template>
+      </v-card>
           <v-card-text>
             <v-autocomplete
               v-model="selected"
@@ -91,6 +118,10 @@ export default {
         icon: 'mdi-view-dashboard',
         text: 'Course3'
       }
+    ],
+    courses:
+    [
+      '코스1','코스2','코스3'
     ],
     responsive: false,
     model: null,
