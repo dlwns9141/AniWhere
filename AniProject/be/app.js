@@ -38,8 +38,20 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
-
-
 module.exports = app;
 
+const mongoose = require('mongoose')
+
+const User = require('./models/places')
+
+//const User = mongoose.model('', userSchema)
+
+mongoose.connect('mongodb+srv://admin:1234@cluster0-uukem.azure.mongodb.net', { dbName : 'aniwhere', useNewUrlParser: true })
+  .then( () => {
+    console.log('Connection to the Atlas Cluster is successful!')
+  })
+  .catch( (err) => console.error(err));
+
+User.find()
+.then(r => console.log(r))
+.catch(e => console.error(e))

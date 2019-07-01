@@ -1,19 +1,20 @@
 var express = require('express');
+var createError = require('http-errors');
 var router = express.Router();
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://admin:1234@cluster0-uukem.azure.mongodb.net/test?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const User = require('../models/places')
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-  
-  client.connect(err => {
-    let collection = client.db("aniwhere").collection("placeInfo");
-    console.log(err)
-    //console.log('result', collection.find({}).toArray());
-    client.close();
-  });
+module.exports = router;
+
+  //Restful
+  router.get('/', function(req, res, next) {
+
+    User.find()
+      .then(r => {
+        res.send({ success : true, users: r})
+      })
+      .catch(e => {
+        res.send({ success : false})
+      })
 });
 
 module.exports = router;
