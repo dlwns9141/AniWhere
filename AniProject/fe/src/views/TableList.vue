@@ -13,8 +13,8 @@
       >
         <material-card
           color="green"
-          title="Simple Table"
-          text="Here is a subtitle for this table"
+          title="코스 이름"
+          text="부가 설명"
         >
           <v-data-table
             :headers="headers"
@@ -42,42 +42,7 @@
           </v-data-table>
         </material-card>
       </v-flex>
-      <v-flex
-        md12
-      >
-        <material-card
-          color="green"
-          flat
-          full-width
-          title="Table on Plain Background"
-          text="Here is a subtitle for this table"
-        >
-          <v-data-table
-            :headers="headers"
-            :items="items.slice(0, 7)"
-            hide-actions
-          >
-            <template
-              slot="headerCell"
-              slot-scope="{ header }"
-            >
-              <span
-                class="subheading font-weight-light text--darken-3"
-                v-text="header.text"
-              />
-            </template>
-            <template
-              slot="items"
-              slot-scope="{ item }"
-            >
-              <td>{{ item.name }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.city }}</td>
-              <td class="text-xs-right">{{ item.salary }}</td>
-            </template>
-          </v-data-table>
-        </material-card>
-      </v-flex>
+
     </v-layout>
   </v-container>
 </template>
@@ -88,58 +53,46 @@ export default {
     headers: [
       {
         sortable: false,
-        text: 'Name',
-        value: 'name'
+        text: '영화 이름',
+        value: 'movie'
       },
       {
         sortable: false,
-        text: 'Country',
-        value: 'country'
+        text: '장소',
+        value: 'place'
       },
       {
         sortable: false,
-        text: 'City',
-        value: 'city'
-      },
-      {
-        sortable: false,
-        text: 'Salary',
-        value: 'salary',
-        align: 'right'
+        text: '설명',
+        value: 'content'
       }
     ],
     items: [
       {
-        name: 'Dakota Rice',
-        country: 'Niger',
-        city: 'Oud-Tunrhout',
-        salary: '$35,738'
+        movie: 'Dakota Rice',
+        place: 'Niger',
+        content: 'Oud-Tunrhout'
       },
       {
-        name: 'Minerva Hooper',
-        country: 'Curaçao',
-        city: 'Sinaai-Waas',
-        salary: '$23,738'
+        movie: 'Minerva Hooper',
+        place: 'Curaçao',
+        content: 'Sinaai-Waas'
       }, {
-        name: 'Sage Rodriguez',
-        country: 'Netherlands',
-        city: 'Overland Park',
-        salary: '$56,142'
+        movie: 'Sage Rodriguez',
+        place: 'Netherlands',
+        content: 'Overland Park'
       }, {
-        name: 'Philip Chanley',
-        country: 'Korea, South',
-        city: 'Gloucester',
-        salary: '$38,735'
+        movie: 'Philip Chanley',
+        place: 'Korea, South',
+        content: 'Gloucester'
       }, {
-        name: 'Doris Greene',
-        country: 'Malawi',
-        city: 'Feldkirchen in Kārnten',
-        salary: '$63,542'
+        movie: 'Doris Greene',
+        place: 'Malawi',
+        content: 'Feldkirchen in Kārnten'
       }, {
-        name: 'Mason Porter',
-        country: 'Chile',
-        city: 'Gloucester',
-        salary: '$78,615'
+        movie: 'Mason Porter',
+        place: 'Chile',
+        content: 'Gloucester'
       }
     ]
   })

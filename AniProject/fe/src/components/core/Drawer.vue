@@ -54,9 +54,10 @@
         </template>
         <v-card>
           <v-card-text class="grey lighten-3">
-            <a>정보</a></br>
             <a>지도</a></br>
-            <a>몰라</a>
+            <v-btn outline block color="secondary" v-on:click="pageMove(i,'table-list')">코스 요약</v-btn>
+            <v-btn outline block color="secondary" v-on:click="pageMove(i,'course1')">추가 정보</v-btn>
+            <v-btn outline block color="secondary" v-on:click="pageMove(i,'maps')">지도</v-btn>
           </v-card-text>
         </v-card>
     </v-expansion-panel-content>
@@ -126,9 +127,9 @@ export default {
     responsive: false,
     model: null,
     pages: [
-      'course','Maps','table-list'
+      'table-list','course1','maps'
     ],
-    selected: 'course1'
+    selected: 'table-list'
   }),
   computed: {
     ...mapState('app', ['image', 'color']),
@@ -150,12 +151,7 @@ export default {
 
   watch: {
        selected (selected) {
-         console.log(selected);
-         if(selected != "course")
-          this.$router.push('/'+selected);
-         else
-         {
-         }
+         this.$router.push("/"+selected);
        }
      },
   mounted () {
@@ -173,6 +169,10 @@ export default {
       } else {
         this.responsive = false
       }
+    },
+    pageMove(id,page) {
+       console.log(id);
+       this.$router.push("/"+page);
     }
   }
 }
