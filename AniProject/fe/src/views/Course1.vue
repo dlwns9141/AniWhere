@@ -12,7 +12,7 @@
       >
         <material-card>
           <v-flex>
-              <v-img :aspect-ratio="16/9" src="AniProject\fe\src\img\howl\test1.png">
+              <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
               </v-img>
           </v-flex>
           <h4 class="title font-weight-light">장소 이름</h4>

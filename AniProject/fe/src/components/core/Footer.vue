@@ -32,7 +32,7 @@ export default {
       { name: '노예1', Link: 'https://github.com/Padack2' },
       { name: '노예2', Link: 'https://github.com/malqoa' },
       { name: '노예3', Link: 'https://github.com/dlwns9141' },
-      { name: '노예4', Link: 'https://blog.creative-tim.com' }
+      { name: '노예4', Link: 'https://github.com/crea9813' }
     ]
   })
 }
