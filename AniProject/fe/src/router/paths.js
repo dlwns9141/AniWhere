@@ -4,18 +4,21 @@
  * official documentation https://router.vuejs.org/en/
  */
 export default [
-  {
-    path: '/course1',
-    // Relative to /src/views
-    view: 'Course1'
-  },
+
   {
     path: '/table-list',
-    name: 'Table List',
+    name: '코스 요약 정보',
     view: 'TableList'
   },
   {
+    path: '/course1',
+    // Relative to /src/views
+    name : '상세 정보',
+    view: 'Course1'
+  },
+  {
     path: '/maps',
+    name: '지도',
     view: 'Maps'
   }
 ]
