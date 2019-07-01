@@ -66,26 +66,6 @@
       </div>
       </template>
       </v-card>
-          <v-card-text>
-            <v-autocomplete
-              v-model="selected"
-              :hint="'Serach Course'"
-              :items="pages"
-              :label="`Course`"
-              persistent-hint
-              prepend-icon="mdi-airplane"
-
-            >
-              <template v-slot:append-outer>
-                <v-slide-x-reverse-transition mode="out-in">
-                  <v-icon
-                    :color="'success'"
-                    v-text="'mdi-circle-edit-outline'"
-                  ></v-icon>
-                </v-slide-x-reverse-transition>
-              </template>
-            </v-autocomplete>
-          </v-card-text>
         </v-card>
       </v-layout>
     </v-img>
