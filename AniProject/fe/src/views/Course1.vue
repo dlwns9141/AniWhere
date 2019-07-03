@@ -15,7 +15,7 @@
               <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
               </v-img>
           </v-flex>
-          <h4 class="title font-weight-light">장소 이름</h4>
+          <h4 class="title font-weight-light">마쓰야마 도고온천</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"
@@ -24,7 +24,39 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">특징</span>&nbsp;
-            내용
+            센이 일하던 온천
+          </p>
+          <template slot="actions">
+            <v-icon
+              class="mr-2"
+              small
+            >
+              mdi-clock-outline
+            </v-icon>
+            <span class="caption grey--text font-weight-light">예상 소요 시간 : 40분</span>
+          </template>
+        </material-card>
+      </v-flex>
+      <v-flex
+        md12
+        sm12
+        lg4
+      >
+        <material-card>
+          <v-flex>
+              <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
+              </v-img>
+          </v-flex>
+          <h4 class="title font-weight-light">야마가타현 아유카와마을 삼나무</h4>
+          <p class="category d-inline-flex font-weight-light">
+            <v-icon
+              color="green"
+              smalls
+            >
+              mdi-arrow-up
+            </v-icon>
+            <span class="green--text">특징</span>&nbsp;
+            토토로의 큰 나무
           </p>
           <template slot="actions">
             <v-icon
@@ -47,7 +79,7 @@
               <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
               </v-img>
           </v-flex>
-          <h4 class="title font-weight-light">장소 이름</h4>
+          <h4 class="title font-weight-light">도모노우라 항</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"
@@ -56,7 +88,7 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">특징</span>&nbsp;
-            내용
+            미야자기 하야오가 포뇨를 구상한 곳
           </p>
           <template slot="actions">
             <v-icon
@@ -65,7 +97,7 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">예상 소요 시간 : xx분</span>
+            <span class="caption grey--text font-weight-light">예상 소요 시간 : 90분</span>
           </template>
         </material-card>
       </v-flex>
@@ -79,7 +111,7 @@
               <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
               </v-img>
           </v-flex>
-          <h4 class="title font-weight-light">장소 이름</h4>
+          <h4 class="title font-weight-light">히에 신사</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"
@@ -88,7 +120,7 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">특징</span>&nbsp;
-            내용
+            미츠하가 살던 곳의 도리이가 있는 신사
           </p>
           <template slot="actions">
             <v-icon
@@ -97,7 +129,7 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">예상 소요 시간 : xx분</span>
+            <span class="caption grey--text font-weight-light">예상 소요 시간 : 30분</span>
           </template>
         </material-card>
       </v-flex>
@@ -111,7 +143,7 @@
               <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
               </v-img>
           </v-flex>
-          <h4 class="title font-weight-light">장소 이름</h4>
+          <h4 class="title font-weight-light">스가 신사</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"
@@ -120,7 +152,7 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">특징</span>&nbsp;
-            내용
+            타키와 미츠하가 재회하는 계단
           </p>
           <template slot="actions">
             <v-icon
@@ -129,7 +161,7 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">예상 소요 시간 : xx분</span>
+            <span class="caption grey--text font-weight-light">예상 소요 시간 : 50분</span>
           </template>
         </material-card>
       </v-flex>
@@ -143,7 +175,7 @@
               <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
               </v-img>
           </v-flex>
-          <h4 class="title font-weight-light">장소 이름</h4>
+          <h4 class="title font-weight-light">히다후루카와 역</h4>
           <p class="category d-inline-flex font-weight-light">
             <v-icon
               color="green"
@@ -152,7 +184,7 @@
               mdi-arrow-up
             </v-icon>
             <span class="green--text">특징</span>&nbsp;
-            내용
+            미츠하의 흔적을 찾기 위해 들른 곳
           </p>
           <template slot="actions">
             <v-icon
@@ -161,39 +193,7 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">예상 소요 시간 : xx분</span>
-          </template>
-        </material-card>
-      </v-flex>
-      <v-flex
-        md12
-        sm12
-        lg4
-      >
-        <material-card>
-          <v-flex>
-              <v-img :aspect-ratio="16/9" src="https://cdn.vuetifyjs.com/images/parallax/material.jpg">
-              </v-img>
-          </v-flex>
-          <h4 class="title font-weight-light">장소 이름</h4>
-          <p class="category d-inline-flex font-weight-light">
-            <v-icon
-              color="green"
-              smalls
-            >
-              mdi-arrow-up
-            </v-icon>
-            <span class="green--text">특징</span>&nbsp;
-            내용
-          </p>
-          <template slot="actions">
-            <v-icon
-              class="mr-2"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">예상 소요 시간 : xx분</span>
+            <span class="caption grey--text font-weight-light">예상 소요 시간 : 40분</span>
           </template>
         </material-card>
       </v-flex>
@@ -203,8 +203,19 @@
 
 <script>
 export default {
+    mounted () {
+    axios.get('http://localhost:3000')
+      .then((r) => {
+        this.places = r.data.users
+        console.log(r)
+      })
+      .catch((e) => {
+        console.error(e.message)
+      })
+  },
   data () {
     return {
+      places: [],
       headers: [
         {
           sortable: false,
