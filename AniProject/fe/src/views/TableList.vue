@@ -18,7 +18,7 @@
         >
           <v-data-table
             :headers="headers"
-            :items="places"
+            :items="items"
             hide-actions
           >
             <template
@@ -31,11 +31,13 @@
               />
             </template>
             <template
-              v-slot:items="places"
+              slot="items"
+              slot-scope="{ item }"
             >
-              <td>{{ places.item.movie }}</td>
-              <td>{{ places.item.place }}</td>
-              <td>{{ places.item.content }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.country }}</td>
+              <td>{{ item.city }}</td>
+              <td class="text-xs-right">{{ item.salary }}</td>
             </template>
           </v-data-table>
         </material-card>
@@ -46,12 +48,9 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  data () {
-    return {
-      places: [],
-      headers: [
+  data: () => ({
+    headers: [
       {
         sortable: false,
         text: '영화 이름',
@@ -67,18 +66,35 @@ export default {
         text: '설명',
         value: 'content'
       }
+    ],
+    items: [
+      {
+        movie: 'Dakota Rice',
+        place: 'Niger',
+        content: 'Oud-Tunrhout'
+      },
+      {
+        movie: 'Minerva Hooper',
+        place: 'Curaçao',
+        content: 'Sinaai-Waas'
+      }, {
+        movie: 'Sage Rodriguez',
+        place: 'Netherlands',
+        content: 'Overland Park'
+      }, {
+        movie: 'Philip Chanley',
+        place: 'Korea, South',
+        content: 'Gloucester'
+      }, {
+        movie: 'Doris Greene',
+        place: 'Malawi',
+        content: 'Feldkirchen in Kārnten'
+      }, {
+        movie: 'Mason Porter',
+        place: 'Chile',
+        content: 'Gloucester'
+      }
     ]
-    }
-  },
-  mounted () {
-    axios.get('http://localhost:3000/')
-      .then((r) => {
-        this.places = r.data.users
-        console.log(r)
-      })
-      .catch((e) => {
-        console.error(e.message)
-      })
-  }
+  })
 }
 </script>

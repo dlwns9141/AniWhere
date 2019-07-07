@@ -202,13 +202,12 @@
 </template>
 
 <script>
-import axios from 'axios'
 export default {
     mounted () {
     axios.get('http://localhost:3000')
       .then((r) => {
         this.places = r.data.users
-        console.log(this.places)
+        console.log(r)
       })
       .catch((e) => {
         console.error(e.message)

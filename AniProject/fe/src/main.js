@@ -16,19 +16,13 @@ import App from './App'
 import i18n from '@/i18n'
 import router from '@/router'
 import store from '@/store'
-import VuetifyGoogleAutocomplete from 'vuetify-google-autocomplete'
 
 // Sync store with router
 sync(store, router)
 
 Vue.config.productionTip = false
 
-Vue.use(VuetifyGoogleAutocomplete, {
-  apiKey: 'AIzaSyAgKogNKjV86ODOyBKuTWBISjTSVHOPs_c', // Can also be an object. E.g, for Google Maps Premium API, pass `{ client: <YOUR-CLIENT-ID> }`
-  version: '...', // Optional
-  language: '...', // Optional
-})
-
+/* eslint-disable no-new */
 new Vue({
   i18n,
   router,
