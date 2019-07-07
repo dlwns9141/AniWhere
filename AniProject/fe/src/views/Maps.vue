@@ -1,33 +1,40 @@
 <template>
-  <div>
-    <div class="mapouter">
-      <div class="gmap_canvas">
-        <iframe
-          id="gmap_canvas"
-          width="100%"
-          height="100%"
-          src="https://maps.google.com/maps?q=google&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-        />
-      </div>
+    <div>
+        <h2>Your Address</h2>
+        <vuetify-google-autocomplete
+            ref="address"
+            id="map"
+            classname="form-control"
+            placeholder="Please type your address"
+            v-on:placechanged="getAddressData"
+            country="sg"
+        >
+        </vuetify-google-autocomplete>
     </div>
-  </div>
 </template>
-
-<style>
-.mapouter {
-  text-align:right;
-  height:100%;
-  width:100%;
-  position: absolute;
-}
-.gmap_canvas {
-  overflow:hidden;
-  background:none!important;
-  height:100%;
-  width:100%;
-}
-</style>
+ 
+<script>
+    export default {
+        data: function () {m
+            return {
+              address: ''
+            }
+        },
+        mounted() {
+            // To demonstrate functionality of exposed component functions
+            // Here we make focus on the user input
+            this.$refs.address.focus();
+        },
+        methods: {
+            /**
+            * When the location found
+            * @param {Object} addressData Data of the found location
+            * @param {Object} placeResultData PlaceResult object
+            * @param {String} id Input container ID
+            */
+            getAddressData: function (addressData, placeResultData, id) {
+                this.address = addressData;
+            }
+        }
+    }
+</script> 
