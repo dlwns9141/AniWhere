@@ -16,11 +16,15 @@
     </div>
     <v-spacer/>
     <span class="font-weight-light copyright">
+      &copy;
       {{ (new Date()).getFullYear() }}
       <a
-        href="https://github.com/dlwns9141/AniWhere"
-        target="_blank">AniWhere</a> GitHub
-
+        href="https://www.creative-tim.com/"
+        target="_blank">Creative Tim</a>, made with
+      <v-icon
+        color="tertiary"
+        size="17">mdi-heart</v-icon>
+      for a better web
     </span>
   </v-footer>
 </template>
@@ -29,10 +33,10 @@
 export default {
   data: () => ({
     links: [
-      { name: '노예1', Link: 'https://github.com/Padack2' },
-      { name: '노예2', Link: 'https://github.com/malqoa' },
-      { name: '노예3', Link: 'https://github.com/dlwns9141' },
-      { name: '노예4', Link: 'https://github.com/crea9813' }
+      { name: 'Home', Link: '/dashboard' },
+      { name: 'Creative Tim', Link: 'https://www.creative-tim.com' },
+      { name: 'About Us', Link: 'https://creative-tim.com/presentation' },
+      { name: 'Blog', Link: 'https://blog.creative-tim.com' }
     ]
   })
 }
